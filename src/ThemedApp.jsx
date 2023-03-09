@@ -15,6 +15,27 @@ const ThemedApp = () => {
               style={{margin: 20}}>
         Change theme
       </Button>
+        <ConfigProvider
+          theme={{
+            components: {
+              Button: {
+                 colorPrimaryBorderHover: 'red',
+                 colorPrimaryHover: 'black',
+                 colorPrimary: 'red',
+                 colorTextBase: '#4096ff',
+                 colorTextDescription: '#4096ff',
+                 colorTextLabel:  '#4096ff',
+                 colorPrimaryText: '#4096ff',
+                 colorText: 'red',
+                 colorPrimaryTextHover: 'orange',
+              }
+            }
+          }}
+        >
+        <Button type='primary'>
+          THIS IS BUTTON
+        </Button>
+      </ConfigProvider>
       <App/>
     </ConfigProvider>
   );
